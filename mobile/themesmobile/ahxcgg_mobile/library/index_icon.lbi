@@ -1,0 +1,71 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<link rel="stylesheet" href="jsnew/tab/css/xcap.css" type="text/css">
+<div class="xcwrap" style="display:none;">
+    
+    <div>
+        <div>
+        <div>
+          <div class="entry-list clearfix">
+	<nav>
+		<ul>
+			{foreach from=$menu_list item=list name=name }
+            {if $smarty.foreach.name.index <= 3}
+			<li>
+				<a href="{$list.menu_url}">
+					<img alt="{$list.menu_name}" src="{$list.menu_img}"  />
+					<span>{$list.menu_name}</span>
+				</a>
+			</li>{/if}
+			{/foreach}
+		</ul>
+	</nav>
+</div>
+          </div>
+        <div class="swiper-slide" style="display:none;">
+          <div class="entry-list clearfix">
+	<nav>
+		<ul>
+			{foreach from=$menu_list item=list name=name }
+            {if $smarty.foreach.name.index > 9 & $smarty.foreach.name.iteration < 21}
+			<li>
+				<a href="{$list.menu_url}">
+					<img alt="{$list.menu_name}" src="{$list.menu_img}"  />
+					<span>{$list.menu_name}</span>
+				</a>
+			</li>{/if}
+			{/foreach}
+		</ul>
+	</nav>
+</div>
+          </div>
+        
+      </div>
+   </div>
+</div>
+ 
+<script src="jsnew/tab/js/idangerous.swiper.min.js"></script> 
+<script>
+var tabsSwiper = new Swiper('.swiper-container',{
+	speed:500,
+	onSlideChangeStart: function(){
+		$(".tabs .active").removeClass('active');
+		$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');
+	}
+});
+
+$(".tabs a").on('touchstart mousedown',function(e){
+	e.preventDefault()
+	$(".tabs .active").removeClass('active');
+	$(this).addClass('active');
+	tabsSwiper.swipeTo($(this).index());
+});
+
+$(".tabs a").click(function(e){
+	e.preventDefault();
+});
+</script>
+
+
+</div>

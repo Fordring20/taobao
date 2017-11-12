@@ -1,0 +1,42 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+
+ {insert_scripts files='region.js,shopping_flow.js'}
+<link rel="stylesheet" type="text/css" href="themesmobile/ahxcgg_mobile/style.css"/>
+
+
+
+
+         <!-- {if $action eq 'tg_order'} -->
+<div class="tabmenu">
+            <ul class="tab pngFix">
+              <li class="first active"><a>{$lang.takegoods_order_list}</a></li>
+            </ul>
+          </div>
+          <div class="mar_top">
+            <table width="100%" border="1" cellpadding="10" cellspacing="0" bgcolor="#dddddd">
+              <tr align="center">
+                <td bgcolor="#ffffff">提货券卡号</td>
+                <td bgcolor="#ffffff">提货商品</td>
+                <td bgcolor="#ffffff">提货时间</td>
+                <td bgcolor="#ffffff">提货地址</td>
+                <td bgcolor="#ffffff">提货状态</td>
+              </tr>
+              <!--{foreach from=$orders item=item}-->
+              <tr>
+                <td align="center" bgcolor="#ffffff">{$item.tg_sn}</td>
+                <td align="center" bgcolor="#ffffff"><a href="{$item.goods_url}" class="f6">{$item.goods_name}</a></td>
+                <td align="center" bgcolor="#ffffff">{$item.add_time}</td>
+                <td align="center" bgcolor="#ffffff">{$item.address}</td>
+                <td align="center" bgcolor="#ffffff"> {if $item.order_status eq '1'} <a href="user.php?act=tg_order_confirm&id={$item.rec_id}"> {/if} <font color={if $item.order_status eq '2'}#ff3300{else}#F52648{/if}>{$item.order_status_name}</font> {if $item.order_status eq '1'} </a> {/if} </td>
+              </tr>
+              <!--{/foreach}-->
+            </table>
+            <div class="blank5"></div>
+<!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+            <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+<!-- {/if} -->  {include file='library/footer_nav.lbi'}
+
+

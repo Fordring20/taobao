@@ -1,0 +1,8 @@
+20161118 07:31:20
+0---041Lb0WU0X77pW1RYHYU0IgGVU0Lb0WQ http://www.523xc.com/mobile/lucky_buy.php?code=041Lb0WU0X77pW1RYHYU0IgGVU0Lb0WQ&state=1
+
+code:041Lb0WU0X77pW1RYHYU0IgGVU0Lb0WQ openid:oPq1Ss9_az3OdfvJq30yZAUHvdz0 setcookie:
+20161118 07:31:24
+0--oPq1Ss9_az3OdfvJq30yZAUHvdz0-001S24eq0mqDWr1GmPbq0mkHdq0S24en http://www.523xc.com/mobile/lucky_buy.php?code=041Lb0WU0X77pW1RYHYU0IgGVU0Lb0WQ&state=1&code=001S24eq0mqDWr1GmPbq0mkHdq0S24en&state=1
+
+code:001S24eq0mqDWr1GmPbq0mkHdq0S24en openid:oPq1Ss9_az3OdfvJq30yZAUHvdz0 setcookie:oPq1Ss9_az3OdfvJq30yZAUHvdz0

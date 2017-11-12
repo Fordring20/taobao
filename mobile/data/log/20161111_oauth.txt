@@ -1,0 +1,12 @@
+20161111 05:19:16
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161111 05:19:17
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20161111 05:19:30
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161111 05:19:31
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+

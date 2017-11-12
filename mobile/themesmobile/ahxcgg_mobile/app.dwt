@@ -1,0 +1,32 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>折翼天使资源社区APP下载</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/ahxcgg_mobile/css/public.css"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/ahxcgg_mobile/css/index.css"/>
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/TouchSlide.1.1.js"></script>
+</head>
+
+<body>
+<div class="body_bj" style="background:url(./images/xcapp_06.jpg);">
+<!--网站头部-->
+<header id="header"> <!-- #BeginLibraryItem "/library/page_header.lbi" --> <!-- #EndLibraryItem --> </header>
+<div class="blank"></div>
+<div><img src="./images/xcapp.jpg"  width="100%" /></div>
+<div class="xcapp" style="width:46%;  margin:0 auto;">
+<ul>
+<li style=" float:left; width:48%"><a href="/download/xciphone.ipa"><img src="./images/xcapp_03.jpg" width="100%"   /></a></li>
+<li style=" float:right; width:48%"><a href="/download/xcandriod.apk"><img src="./images/xcapp_05.jpg" width="100%"  /></a></li>
+</ul>
+</div>
+<div><img src="./images/xcapp2.jpg"  width="100%" /></div>
+<div class="site-footer">
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> </div>
+</div>
+</body>
+</html>

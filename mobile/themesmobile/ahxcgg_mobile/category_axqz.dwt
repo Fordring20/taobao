@@ -1,0 +1,189 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="themesmobile/ahxcgg_mobile/css/group_buy.css"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/ahxcgg_mobile/css/public.css"/>
+<link rel="stylesheet" type="text/css" href="themesmobile/ahxcgg_mobile/css/category.css"/>
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/jquery.js"></script>
+{insert_scripts files='jquery.json.js,transport.js'}
+{insert_scripts files='common.js'}
+<script type="application/javascript" src="themesmobile/ahxcgg_mobile/js/jquery.more.js"></script>
+</head>
+<style type="text/css">
+.p2 {
+    color: #AAAAAA;
+    font-size: 14px;
+    width: 100%;
+    height: 42px;
+    line-height: 14px;
+    text-overflow:ellipsis; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+</style>
+<body class="body_bj">
+
+<header id="head_search_box" style="position: fixed; top: 0px; width: 100%; z-index:9999;">
+    <div class="cate_header" style="border-bottom: none;">
+        <div class="cate_left"><a href="javascript:history.back(-1)" class="sb-back" title="返回"></a></div>
+    <div class="cate_mid" style="text-align: center; padding-top: 0;">
+        <p style="line-height: 45px;">心耀龙城</p>
+    </div>
+</header>
+{foreach from=$wap_group_ad item=ad name=wap_group_ad}
+<div class="but_banner" style="border-bottom: none; margin-top: 45px;"><a href="{$ad.url}" class="u-brand-pic J_item-list"> <img src="{$ad.image}" class="BrandMer_star"></a></div>
+{/foreach}
+
+<div style="background-color: #ffffff; border-bottom: 1px solid #F0F0F0; padding: 8px 0; height: 30px;">
+    <div style="width: 100%; height: 30px; text-align: center;">
+        <p style="line-height: 30px; font-size: 18px;">已凝聚&nbsp;<span style="color: #ff0000; font-size: 16px; font-weight: bold;">{$axmoney}</span>&nbsp;元爱心</p>
+    </div>
+</div>
+
+<div style="background-color: #ffffff; border-bottom: 1px solid #F0F0F0; padding: 8px 0; height: 24px;">
+    <div style="width: 5px; height: 24px; background-color: #FF0000; float: left;">
+    </div>
+    <span style="float: left; line-height: 24px; margin-left: 10px;">最受关注</span>
+</div>
+
+<section class="_pre">
+<!--列表-->
+<script type="text/javascript">
+var url = 'category.php?act=ajaxqiuzhu&cat_id={$cat_id}';
+$(function(){
+	$('#J_ItemList').more({'address': url});
+});
+</script>
+<div class="touchweb-com_searchListBox" id="goods_list">
+  <!-- #BeginLibraryItem "/library/goods_list.lbi" --><!-- #EndLibraryItem -->  
+</div>
+</div>
+</section>
+
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/zepto.min.js"></script>
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/filter.min.js"></script>
+<script type="text/javascript">
+function onXianax(id)
+{
+    $.post("category.php?act=axqzxianax", {"id": id}, function(res) {
+        if (res.error == 0)
+        {
+            $("#axspansel_"+id).css("display", "");
+            $("#axspanunsel_"+id).css("display", "none");
+            var ax = parseInt($("#axcount_"+id).text());
+            ax = ax + 1;
+            $("#axcount_"+id).text(ax);
+        }
+        else
+        {
+            alert(res.message);
+        }
+    }, "json");
+}
+
+function onselShijiInfo(id)
+{
+    window.location.href = "category.php?act=axqzinfo&id=" + id;
+}
+
+function get_brand(brand_id)
+{
+	document.getElementById('brand').value = brand_id;
+	var obj = document.getElementById('brands').getElementsByTagName('li');
+	for(var i=0;i<obj.length;i++)
+	{
+		obj[i].className = '';
+	}
+	document.getElementById('brand_'+brand_id).className = 'on';
+}
+
+function get_price(price_min,price_max)
+{
+	document.getElementById('price_min').value = price_min;
+	document.getElementById('price_max').value = price_max;
+	var obj = document.getElementById('prices').getElementsByTagName('a');
+	for(var i=0;i<obj.length;i++)
+	{
+		obj[i].className = '';
+	}
+	document.getElementById('price_'+price_min).className = 'on';
+}
+
+<!--{foreach from=$filter_attr_list item=filter_attr name=filter_attr_list}-->
+
+function get_attr_{$smarty.foreach.filter_attr_list.iteration}(attr_id)
+{
+	document.getElementById('showahxcgg_{$smarty.foreach.filter_attr_list.iteration}').value=attr_id;
+	var showahxcgg = document.getElementsByName("showahxcgg");
+	var zongshu = null;
+	for(var i=showahxcgg.length;i>0;i--){
+	if(zongshu == null)
+	{
+		zongshu = document.getElementById("showahxcgg_"+i).value;
+	
+	}
+	else
+	{
+		zongshu = document.getElementById("showahxcgg_"+i).value +"."+zongshu;
+		document.getElementById('filter_attr').value = zongshu;	
+	}
+	}
+	
+	var obj = document.getElementById('attrs_{$smarty.foreach.filter_attr_list.iteration}').getElementsByTagName('li');
+	for(var i=0;i<obj.length;i++)
+	{
+		obj[i].className = '';
+	}
+	document.getElementById('attr_{$smarty.foreach.filter_attr_list.iteration}_'+attr_id).className = 'on';
+}
+<!--{/foreach}-->
+</script>
+
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+//  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+<footer>
+<!-- #BeginLibraryItem "/library/footer_nav.lbi" --><!-- #EndLibraryItem -->
+</footer>
+<!---返回顶部-->
+<script>
+function goTop(){
+	$('html,body').animate({'scrollTop':0},600);
+}
+</script>
+<a href="javascript:goTop();" class="gotop" style=" z-index:9999"><img src="themesmobile/ahxcgg_mobile/images/topup.png"></a> 
+</body>
+</html>

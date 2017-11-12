@@ -1,0 +1,15 @@
+20160902 05:22:02
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php
+
+20160902 05:22:02
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php?u=310
+
+20160902 05:22:04
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160902 05:25:08
+0--- http://www.523xc.com/mobile/lucky_buy.php?u=310
+
+20160902 05:25:11
+0--- http://www.523xc.com/mobile/lucky_buy.php
+

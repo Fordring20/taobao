@@ -1,0 +1,21 @@
+20160808 04:52:19
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20160808 04:52:21
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160808 04:52:31
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20160808 04:52:31
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160808 04:52:35
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=0
+
+20160808 04:52:37
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20160808 04:52:47
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=view_goods&act_id=45&u=0
+

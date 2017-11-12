@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{if $order.order_id}-->
+  <div class="order_list">
+
+         <a href="user.php?act=order_detail&order_id={$order.order_id}">
+
+       <div class="order_list_goods" style="background-color:#ffffff; border-bottom:1px solid #EEEEEE;">
+        <dl>  
+          <dt><img src="{$order.goods_thumb}"></dt>
+          <dd class="name"><p><strong>{$order.goods_name|truncate:25}</strong></p>
+          <span>
+            {if $order.goods_attr}{$order.goods_attr|nl2br}{/if}
+          </span>
+          <p style="font-size:12px; line-height:18px; color:#999;">成交时间：{$order.pay_time}</p>
+          <p style="font-size:12px; line-height:18px; color:#999;">供应商：{$order.suppliers_name}</p>
+          </dd>
+          <dd class="pice" >{$order.formated_goods_price}</dd>
+          </dl>
+          </div>
+
+          </a>
+          <div style="text-align: left; color:#666; width:95%; overflow: hidden; border-bottom: 1px solid #eee; font-size: 14px; line-height: 18px; padding: 10px;"><p>描述：{$order.message}</p></div>
+	
+    </div>
+<!--{else}-->
+ <div id="list_0_0" class="font12">您还没有任何的订单哦！</div>
+<!--{/if}-->

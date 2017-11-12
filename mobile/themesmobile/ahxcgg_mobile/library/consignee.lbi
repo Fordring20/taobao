@@ -1,0 +1,32 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <div class="address_add_content" >
+<h2>请先添加提货人信息</h2>
+	<ul>
+       <li>
+    	<input type="text" placeholder="提 货 人" name="consignee" value="{$consignee_info.consignee|escape}" id="consignee_{$sn}"  maxlength="20"/>
+		</li> 
+			
+			<li>
+			<input type="tel" name="mobile" value="{$consignee_info.mobile|escape}" required id="mobile_{$sn}"  placeholder="{$lang.mobile}{$lang.must}"/>
+	        </li>
+    	</ul>
+            
+        {if $smarty.session.user_id gt 0 and $consignee_info.address_id gt 0}
+        <div style=" width:100%; height:40px;">
+          <span class="fl" style="width:48%;">
+            <input type="submit" class="c-btn-orange" value="选择">
+          </span>
+          <span class="fr" style="width:48%;">
+          <a href="javascript:void(0);" class="c-btn-orange" onclick="if (confirm('{$lang.confirm_drop_address}'))location.href='?step=drop_consignee&id={$consignee_info.address_id}'"/>{$lang.drop}</a>
+          </span>
+          </div>
+          {else}
+    <div class="field submit-btn"><input type="submit" value="新增提货地址" class="c-btn-orange "/></div>
+    
+	{/if}
+      
+     <input type="hidden" name="step" value="consignee">
+	<input type="hidden" name="act" value="checkout" >
+	<input type="hidden" name="address_id" value="{$consignee_info.address_id}">
+ 
+</div>

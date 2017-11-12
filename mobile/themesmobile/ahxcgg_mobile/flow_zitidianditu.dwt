@@ -1,0 +1,85 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/public.css">
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/flow.css">
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/style_jm.css">
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/jquery.js"></script>
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/ecsmart.js"></script>
+{insert_scripts files='jquery.json.js,transport.js'}
+{insert_scripts files='common.js,utils.js,shopping_flow.js'}
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=tQCdpcBLYZghj464jcWL9oak"></script>
+
+<style type="text/css">
+  p {
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+  }
+
+  body, html{width: 100%;height: 100%; margin:0;font-family:"微软雅黑";}
+  #l-map{height:800px;width:100%;}
+
+</style>
+
+</head>
+<body style="background:#ffffff;">
+<!-- 头部 -->
+<div class="tab_nav">
+  <div class="header" style="position:relative; border-bottom:1px solid #CCC;">
+    <div class="h-left"> <a class="sb-back" href="javascript:history.back();" title="返回"></a> </div>
+    <div class="h-mid">
+      <p>网点地图</p>
+    </div>
+  </div>
+</div>
+
+<div id="l-map"></div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+var map = new BMap.Map("l-map");
+// map.centerAndZoom("{$shi}", 15);
+
+var lng = {$ppoint.lng};
+var lat = {$ppoint.lat};
+
+var vpoint = 0;
+if (lng <= 0.00 && lat <= 0.00)
+{
+  // 创建地址解析器实例     
+  var myGeo = new BMap.Geocoder();
+  // 将地址解析结果显示在地图上，并调整地图视野    
+  myGeo.getPoint("{$sheng}{$shi}{$qu}{$address}", function(point){      
+      if (point)
+      {
+        vpoint = point;
+        map.centerAndZoom(point, 16);
+        map.addOverlay(new BMap.Marker(point));
+      }
+      else
+      {
+        alert("您选择的地址没有解析到结果!");
+      }
+  }, "{$shi}");
+}
+else
+{
+  var point = new BMap.Point(lng, lat);
+  var marker = new BMap.Marker(point);
+  map.addOverlay(marker);
+  vpoint = point;
+}
+
+map.centerAndZoom(vpoint, 15);
+
+</script>

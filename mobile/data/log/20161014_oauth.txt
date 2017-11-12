@@ -1,0 +1,57 @@
+20161014 06:00:40
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 06:00:44
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 06:00:45
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20161014 06:01:16
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 06:01:17
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20161014 06:01:43
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 06:01:47
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20161014 06:04:38
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 06:43:50
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 06:43:50
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20161014 10:24:32
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 10:24:33
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20161014 10:25:00
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=0
+
+20161014 10:25:03
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20161014 10:25:11
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 10:25:11
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20161014 10:27:20
+775-u137VTS6931-- http://www.523xc.com/mobile/lucky_buy.php
+
+20161014 10:27:20
+775-u137VTS6931-- http://www.523xc.com/mobile/lucky_buy.php?u=775
+
+20161014 10:27:21
+775-u137VTS6931-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+

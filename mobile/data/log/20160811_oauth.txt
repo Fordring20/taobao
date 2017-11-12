@@ -1,0 +1,54 @@
+20160811 02:24:26
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php
+
+20160811 02:24:26
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php?u=310
+
+20160811 02:24:28
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160811 02:27:26
+0--- http://www.523xc.com/mobile/lucky_buy.php?u=310
+
+20160811 04:47:11
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20160811 04:47:12
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160811 04:47:16
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=0
+
+20160811 04:47:17
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=0
+
+20160811 04:47:19
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=0
+
+20160811 04:47:20
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20160811 04:47:29
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160811 07:57:53
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php
+
+20160811 07:57:53
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php?u=310
+
+20160811 07:57:54
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160811 11:58:45
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php
+
+20160811 11:58:45
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php?u=310
+
+20160811 11:58:46
+310-liap-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160811 12:01:45
+0--- http://www.523xc.com/mobile/lucky_buy.php?u=310
+

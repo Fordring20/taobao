@@ -1,0 +1,6 @@
+20171017 07:43:29
+0--- http://localhost/aixingou/mobile/lucky_buy.php
+
+20171017 07:43:29
+0--- http://localhost/aixingou/mobile/lucky_buy.php?act=asynclist&type=
+

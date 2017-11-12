@@ -1,0 +1,108 @@
+20160829 07:44:42
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php
+
+20160829 07:44:43
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?u=576
+
+20160829 07:44:44
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160829 07:44:53
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=576
+
+20160829 07:44:55
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20160829 07:45:01
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=calculate&u=576
+
+20160829 07:45:01
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=calculate&u=576
+
+20160829 07:45:15
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=576
+
+20160829 07:45:16
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20160829 07:45:37
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php
+
+20160829 07:45:37
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20160829 07:45:37
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?u=576
+
+20160829 07:45:38
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160829 07:45:38
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160829 07:45:47
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=576
+
+20160829 07:45:47
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20160829 07:46:09
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=schedulelist&act_id=45
+
+20160829 07:46:09
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?u=576&act=schedulelist&act_id=45
+
+20160829 07:46:10
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=asyncschedulelist&act_id=45
+
+20160829 07:46:12
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=576
+
+20160829 07:46:12
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20160829 07:46:14
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php
+
+20160829 07:46:48
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=576
+
+20160829 07:46:49
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20160829 07:46:58
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?u=576
+
+20160829 07:46:58
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160829 07:47:00
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=576
+
+20160829 07:47:01
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=lucky_buy_log&lucky_buy_id=10
+
+20160829 07:47:01
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?u=576
+
+20160829 07:47:02
+576-Lsee-- http://www.523xc.com/mobile/lucky_buy.php?act=asynclist&type=
+
+20160829 07:47:42
+0--- http://www.523xc.com/mobile/lucky_buy.php
+
+20160829 07:47:50
+0--- http://www.523xc.com/mobile/lucky_buy.php?u=576
+
+20160829 07:48:01
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=calculate&u=576
+
+20160829 07:48:02
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=view&act_id=45&u=576
+
+20160829 07:49:09
+0--- http://www.523xc.com/mobile/lucky_buy.php?act=schedulelist&act_id=45
+
+20160829 07:49:09
+0--- http://www.523xc.com/mobile/lucky_buy.php?u=576&act=schedulelist&act_id=45
+

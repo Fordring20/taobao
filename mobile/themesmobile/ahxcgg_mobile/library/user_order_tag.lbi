@@ -1,0 +1,62 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+<link rel="stylesheet" type="text/css" href="themesmobile/ahxcgg_mobile/style.css"/>
+
+ {insert_scripts files='region.js,shopping_flow.js'}
+
+          <!--{if $action eq "tg_login"} -->
+ 
+          <div class="mar_top">
+            <form action="" method="post" name="valueForm" id="valueForm" onSubmit="return valueLogin()">
+
+
+
+	     <div class="Top">
+           
+            <dl>
+            <dt><i class="vclgin2"></i><span>劵号：</span></dt>
+            <dd><input type="text" name="tcard"  class="inputBg"  placeholder="劵号" style="width:90%"</dd>
+            </dl>
+            <dl>
+            <dt><i class="vclgin3"></i><span>密码：</span></dt>
+            <dd><input type="password" name="pwd"  class="inputBg" placeholder="请输入密码" style="width:90%"></dd>
+            </dl>
+             </div>
+          
+           
+<input type="hidden" name="act" value="tg_login_act">
+			<input type="submit" name="submit"  class="btn_big1" value="确认"/>
+
+
+            </form>
+          </div>
+          <script type="text/javascript">
+          function valueLogin()
+	 {
+		var frm = document.forms['valueForm'];
+		var vcard=frm.elements['vcard'].value;
+		var pwd = frm.elements['pwd'].value;
+		var msg = '';
+
+		if (vcard.length == 0)
+		{
+			msg +=  '卡号不能为空\n';
+		}
+		if (pwd.length == 0)
+		{
+			msg +=  '密码不能为空\n';
+		}
+
+		if (msg.length > 0)
+		{
+			alert(msg);
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+        </script> 
+          <!-- {/if} --> {include file='library/footer_nav.lbi'}

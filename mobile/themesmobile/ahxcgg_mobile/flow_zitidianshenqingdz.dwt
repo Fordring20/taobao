@@ -1,0 +1,132 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/public.css">
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/flow.css">
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/style_jm.css">
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/jquery.js"></script>
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/ecsmart.js"></script>
+{insert_scripts files='jquery.json.js,transport.js'}
+{insert_scripts files='common.js,utils.js,shopping_flow.js'}
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=tQCdpcBLYZghj464jcWL9oak"></script>
+
+<style type="text/css">
+  p {
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+  }
+
+  body, html{width: 100%;height: 100%; margin:0;font-family:"微软雅黑";}
+  #l-map{height:300px;width:100%;}
+
+  .addtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0000CC;
+    margin-left: 30px;
+    margin-top: -25px;
+  }
+  .addadress {
+    font-size: 14px;
+    color: #666666;
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+</style>
+
+</head>
+<body style="background:#ffffff;">
+<!-- 头部 -->
+<div class="tab_nav">
+  <div class="header" style="position:relative; border-bottom:1px solid #CCC;">
+    <div class="h-left"> <a class="sb-back" href="javascript:history.back();" title="返回"></a> </div>
+    <div class="h-mid">
+      <input type="text" id="sokeyword" name="sokeyword" value="" placeholder="请输入写字楼/小区/学校" style="width: 90%; line-height: 24px; border: none; outline: none; background-color: #F4F4F4; padding: 0 5px;">
+    </div>
+    <div style="float: left; line-height: 45px;">
+      <img src="themesmobile/ahxcgg_mobile/images/soso30.png" onclick="onSearchDz()">
+    </div>
+  </div>
+</div>
+
+<div id="l-map"></div>
+<!-- <div id="r-result"></div> -->
+<ol id="r-result" style="display: block; height: 300px; overflow: auto; list-style: none; padding: 0px; margin: 5px 10px;">
+</ol>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  // 百度地图API功能
+  var map = new BMap.Map("l-map");            // 创建Map实例
+
+  var native = new BMap.LocalCity();
+  native.get(function(r){
+    map.centerAndZoom(r.name, 15);
+  });
+
+  var addres = new Array();
+  var options = {
+    onSearchComplete: function(results){
+      // 判断状态是否正确
+      if (local.getStatus() == BMAP_STATUS_SUCCESS){
+        var s = [];
+        for (var i = 0; i < results.getCurrentNumPois(); i ++)
+        {
+          addres[i] = results.getPoi(i);
+
+          var html = '<li id="addli' + i + '" onclick="onSelAdd(' + i + ')"><img src="themesmobile/ahxcgg_mobile/images/addr.png">';
+          html += '<p class="addtitle">' + results.getPoi(i).title + '</p>';
+          html += '<p class="addadress"><span style="font-weight: bold; color: #000;">地址：</span>' + results.getPoi(i).address + '</p>';
+
+          s.push(html);
+
+          var point = new BMap.Point(results.getPoi(i).point.lng, results.getPoi(i).point.lat);
+          addMarker(point);
+        }
+        map.panTo(new BMap.Point(results.getPoi(0).point.lng, results.getPoi(0).point.lat));
+
+        document.getElementById("r-result").innerHTML = s.join("");
+      }
+    }
+  };
+
+  var local = new BMap.LocalSearch(map, options);
+
+  function addMarker(point){
+    var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+  }
+
+  function onSearchDz()
+  {
+    var keyword = $("#sokeyword").val();
+    local.search(keyword);
+  }
+
+  function onSelAdd(i)
+  {
+    for (var j = 0; j < addres.length; j++)
+    {
+      if (j == i)
+      {
+        $("#addli" + j).css("background-color", "#F0F0F0");
+      }
+      else
+      {
+        $("#addli" + j).css("background-color", "#FFFFFF");
+      }
+    }
+    window.location.href = "flow.php?step=zitidiansq&ztd={$ztdname}&lxr={$lxrname}&lxrp={$lxrphone}&address=" + addres[i]['address'] + "&lng=" + addres[i]['point']['lng'] + "&lat=" + addres[i]['point']['lat'];
+  }
+
+</script>

@@ -1,0 +1,11 @@
+'<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxb3cde6a786b2de4b]]></appid>
+<mch_id><![CDATA[1243447502]]></mch_id>
+<nonce_str><![CDATA[VVQq85RAZY0FnEvK]]></nonce_str>
+<sign><![CDATA[8FFF00943E80A571147B68103BF7A325]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201611272149390ea6e7d2220457888591]]></prepay_id>
+<trade_type><![CDATA[NATIVE]]></trade_type>
+<code_url><![CDATA[weixin://wxpay/bizpayurl?pr=BZHpwzn]]></code_url>
+</xml>'

@@ -1,0 +1,204 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/public.css">
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/flow.css">
+<link rel="stylesheet" href="themesmobile/ahxcgg_mobile/css/style_jm.css">
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/jquery.js"></script>
+<script type="text/javascript" src="themesmobile/ahxcgg_mobile/js/ecsmart.js"></script>
+{insert_scripts files='jquery.json.js,transport.js'}
+{insert_scripts files='common.js,utils.js,shopping_flow.js'}
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=tQCdpcBLYZghj464jcWL9oak"></script>
+
+<style type="text/css">
+  p {
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+  }
+
+  .selAddr {
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    height: 48px;
+    background-color: #169BD5;
+    border: none;
+    outline: none;
+  }
+  .selAddr:link    {background-color: #169BD5;}
+  .selAddr:visited {background-color: #169BD5;}
+  .selAddr:hover   {background-color: #169BD5;}
+  .selAddr:active  {background-color: #33A4D5;}
+</style>
+
+</head>
+<body style="background:#F0F0F0;">
+<!-- 头部 -->
+<div class="tab_nav">
+  <div class="header" style="position:relative; border-bottom:1px solid #CCC;">
+    <div class="h-left"> <a class="sb-back" href="flow.php?step=zitidianlist" title="返回"></a> </div>
+    <div class="h-mid">网点申报</div>
+  </div>
+</div>
+
+<div style="width: 100%; background-color: #fff; margin-top: 10px;">
+  <div style="margin: 0 15px; border-bottom: 1px solid #ccc;">
+    <div style="width: 100%; height: 40px; line-height: 40px;">
+      <span style="font-size: 16px;">网点名称：</span>
+      <input type="text" id="ztdname" name="ztdname" value="{$ztdname}" placeholder="请输入自提点名称" style="width: 70%;">
+    </div>
+  </div>
+
+  <div style="margin: 0 15px; border-bottom: 1px solid #ccc;">
+    <div style="width: 100%; height: 40px; line-height: 40px;">
+      <span style="font-size: 16px;">联系人：</span>
+      <input type="text" id="lxrname" name="lxrname" value="{$lxrname}" placeholder="请输入姓名" style="width: 70%;">
+    </div>
+  </div>
+
+  <div style="margin: 0 15px; border-bottom: 1px solid #ccc;">
+    <div style="width: 100%; height: 40px; line-height: 40px;">
+      <span style="font-size: 16px;">手机号：</span>
+      <input type="text" id="lxrphone" name="lxrphone" value="{$lxrphone}" placeholder="请输入联系电话" style="width: 70%;">
+    </div>
+  </div>
+
+  <div style="margin: 0 15px; border-bottom: 1px solid #ccc;">
+    <div style="width: 100%; height: 40px; line-height: 40px;">
+      <span style="font-size: 16px; float: left;">地址：</span>
+      <input type="text" id="address" name="address" value="{$addaddress}" placeholder="请选择地址" style="width: 80%;" readonly="readonly" onclick="onSelDizhi()">
+      <input type="text" id="sheng" name="sheng" value="" style="width: 80%;" readonly="readonly" hidden="hidden">
+      <input type="text" id="shi" name="shi" value="" style="width: 80%;" readonly="readonly" hidden="hidden">
+      <input type="text" id="qu" name="qu" value="" style="width: 80%;" readonly="readonly" hidden="hidden">
+    </div>
+  </div>
+  
+</div>
+
+<div style="width: 100%; height: 48px; position: absolute; bottom: 0; left: 0;">
+  <button class="selAddr" onclick="onZitidainSq()">提交</button>
+</div>
+
+<script type="text/javascript">
+  var lng = {$addlng};
+  var lat = {$addlat};
+  if (lng != -1 && lat != -1)
+  {
+    var myGeo = new BMap.Geocoder();      
+    // 根据坐标得到地址描述    
+    myGeo.getLocation(new BMap.Point(lng, lat), function(result){      
+      if (result)
+      {
+        $("#sheng").val(result.addressComponents.province);
+        $("#shi").val(result.addressComponents.city);
+        $("#qu").val(result.addressComponents.district);
+      }      
+    });
+  }
+
+  function onSelDizhi()
+  {
+    var ztdname = $("#ztdname").val();
+    var lxrname = $("#lxrname").val();
+    var lxrphone = $("#lxrphone").val();
+    window.location.href = "flow.php?step=zitidiandzsel&ztd="+ztdname+"&lxr="+lxrname+"&lxrp="+lxrphone;
+  }
+
+  function selectSheng()
+  {
+    var ztdname = $("#ztdname").val();
+    var lxrname = $("#lxrname").val();
+    var lxrphone = $("#lxrphone").val();
+    var sheng = $("#sheng").val();
+    if (sheng <= 0)
+    {
+      return;
+    }
+
+    window.location.href = "flow.php?step=zitidiansq&province="+sheng+"&ztd="+ztdname+"&lxr="+lxrname+"&lxrp="+lxrphone;
+  }
+
+  function selectShi()
+  {
+    var ztdname = $("#ztdname").val();
+    var lxrname = $("#lxrname").val();
+    var lxrphone = $("#lxrphone").val();
+    var sheng = $("#sheng").val();
+    var shi = $("#shi").val();
+    if (sheng <= 0 || shi <= 0)
+    {
+      return;
+    }
+
+    window.location.href = "flow.php?step=zitidiansq&province="+sheng+"&city="+shi+"&ztd="+ztdname+"&lxr="+lxrname+"&lxrp="+lxrphone;
+  }
+
+  function selectQu()
+  {
+    var ztdname = $("#ztdname").val();
+    var lxrname = $("#lxrname").val();
+    var lxrphone = $("#lxrphone").val();
+    var sheng = $("#sheng").val();
+    var shi = $("#shi").val();
+    var qu = $("#qu").val();
+    if (sheng <= 0 || shi <= 0 || qu <= 0)
+    {
+      return;
+    }
+    window.location.href = "flow.php?step=zitidiansq&province="+sheng+"&city="+shi+"&district="+qu+"&ztd="+ztdname+"&lxr="+lxrname+"&lxrp="+lxrphone;
+  }
+
+  function onZitidainSq()
+  {
+    var ztdname = $("#ztdname").val();
+    var lxrname = $("#lxrname").val();
+    var lxrphone = $("#lxrphone").val();
+    var sheng = $("#sheng").val();
+    var shi = $("#shi").val();
+    var qu = $("#qu").val();
+    var address = $("#address").val();
+    if (ztdname == undefined || ztdname == null || ztdname == "")
+    {
+      alert("请输入自提点名称！");
+      return;
+    }
+    if (lxrname == undefined || lxrname == null || lxrname == "")
+    {
+      alert("请输入姓名！");
+      return;
+    }
+    if (lxrphone == undefined || lxrphone == null || lxrphone == "")
+    {
+      alert("请输入联系电话！");
+      return;
+    }
+    if (address == undefined || address == null || address == "")
+    {
+      alert("地址错误请重新选择！");
+      return;
+    }
+    $.post("flow.php?step=zitidianadd", {"ztdname": ztdname, "lxrname": lxrname, "lxrphone": lxrphone, "sheng": sheng, "shi": shi, "qu": qu, "address": address, "lng": {$addlng}, "lat": {$addlat}}, function(res) {
+      if (res['error'] == 0)
+      {
+        alert("申报成功！");
+        window.location.href = "flow.php?step=zitidianlist";
+      }
+      else
+      {
+        alert(res['message']);
+      }
+    }, "json");
+  }
+
+</script>
+
+</body>
+</html>
